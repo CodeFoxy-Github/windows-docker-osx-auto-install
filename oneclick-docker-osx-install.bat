@@ -55,6 +55,14 @@ wsl sudo apt -y install bridge-utils cpu-checker libvirt-clients libvirt-daemon 
 wsl curl -fsSL https://get.docker.com -o get-docker.sh
 wsl sh get-docker.sh
 wsl sudo dockerd
-wsl wget https://ucf29bcb928b9f1aac10259547a6.dl.dropboxusercontent.com/cd/0/inline/CRNm7EEcHTHmg6eOPsQEqdtrmcgy3LOvdmiZb1HzIIT2JAfSvqm07sC4FAJlU-Q4F0u8yxr8w4GL0AjhvpYEaC_GKZ-5mYjr2IG447Pw7mrdiuHb6b4zzqQ7twewc4iBAvJyngUr65S30Kzwa4aefPdO/file#
+wsl touch file
+ECHO docker run -it \ >> file
+ECHO --device /dev/kvm \ >> file
+ECHO -p 50922:10022 \ >> file
+ECHO -e "DISPLAY=${DISPLAY:-:0.0}" \ >> file
+ECHO -v /mnt/wslg/.X11-unix:/tmp/.X11-unix \ >> file
+ECHO -e GENERATE_UNIQUE=true \ >> file
+ECHO -e MASTER_PLIST_URL='https://raw.githubusercontent.com/sickcodes/osx-serial-generator/master/config-custom.plist' \ >> file
+ECHO sickcodes/docker-osx:ventura >> file
 WSL chmod +x file
 wsl ./file
