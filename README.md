@@ -5,3 +5,4 @@ curl
 download the file and run it
 ## warning
 if ur antyvirus like kaspersky it might false positive the code and lock ur system (my windows it locked and reboot will fix)
+You can see the code its no virus
