@@ -36,7 +36,6 @@ wsl_update_x64.msi /passive
 echo Installing WSL...
 rem Enable WSL
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-
 rem Enable Virtual Machine Platform (required for WSL 2)
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 wsl --set-default-version 2
