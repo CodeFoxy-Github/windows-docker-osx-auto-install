@@ -1,6 +1,4 @@
 @echo off
-
-:: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
